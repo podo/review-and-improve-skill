@@ -1,4 +1,4 @@
-# review-and-improve
+# review-and-improve skill
 
 A portable Agent Skill for reviewing implementation plans against the user's intent and checking whether an executor can carry them out without consequential guessing.
 
@@ -14,7 +14,7 @@ The skill produces evidence-backed findings and a concrete plan delta. It does n
 Clone into a directory scanned by your agent runtime. For runtimes that support the shared Agent Skills directory:
 
 ```sh
-git clone https://github.com/podo/review-and-improve.git ~/.agents/skills/review-and-improve
+git clone https://github.com/podo/review-and-improve-skill.git ~/.agents/skills/review-and-improve
 ```
 
 Other runtimes may require placing the repository contents in their own skills directory. Keep `SKILL.md`, `references/`, and `evals/` together; the skill resolves its references relative to `SKILL.md`.
