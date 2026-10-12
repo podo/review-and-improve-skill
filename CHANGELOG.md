@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased]
+
+- Define the boundary between aligned plans and plans that omit material user requirements.
+- Add an eval for a plan that matches the headline goal but omits explicit access and filter requirements.
+
 ## [0.1.0] - 2026-10-11
 
 - Initial release of the `review-and-improve` Agent Skill.

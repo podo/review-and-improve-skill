@@ -49,6 +49,14 @@ Use exactly two independent verdicts:
 - **Intent alignment:** `aligned`, `partial`, or `misaligned`.
 - **Execution readiness:** `ready`, `needs changes`, or `blocked`.
 
+Use these intent-alignment boundaries:
+
+- **Aligned:** the plan preserves every material goal, constraint, and decision established by the user's intent. Missing implementation detail can still make execution readiness `needs changes` without lowering alignment, as long as it does not omit a material user requirement.
+- **Partial:** the broad intended outcome remains recognizable, but the plan omits, weakens, or leaves unsupported one or more material goals, constraints, or decisions, without directly contradicting a core goal or material constraint. Do not call a plan aligned merely because its headline feature matches the request.
+- **Misaligned:** the plan directly conflicts with a core goal or material constraint, or materially redirects the intended outcome. A direct conflict is misaligned even when some parts of the plan support the goal.
+
+Judge material omissions from the conversation and evidence, not from what an executor could plausibly assume. Keep execution readiness independent: consequential implementation or verification gaps may require `needs changes` even when intent is `aligned`; an omitted material intent requirement makes alignment at least `partial` and may also make the plan not ready.
+
 Interpret these verdicts independently; an executable but materially misaligned plan is not ready to start. Use the definitions in [finding-schema.md](references/finding-schema.md), and always follow this self-contained minimum report structure. The reference adds detail; if it is inaccessible, do not omit the fields below.
 
 ```markdown

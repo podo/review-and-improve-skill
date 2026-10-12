@@ -40,7 +40,7 @@ Omit empty change categories; retain both verdicts, the recommendation, and revi
 
 ## Verdict interpretation
 
-- **Intent alignment — `aligned`:** no material conflict or omission between explicit user intent and the plan. **`partial`:** core direction matches, but material requirements or scope boundaries are missing or under-specified. **`misaligned`:** a material plan step contradicts a settled user goal, constraint, or later clarification.
+- **Intent alignment — `aligned`:** the plan preserves every material goal, constraint, and decision established by the user's intent. Missing implementation detail can still make execution readiness `needs changes` without lowering alignment, as long as it does not omit a material user requirement. **`partial`:** the broad intended outcome remains recognizable, but the plan omits, weakens, or leaves unsupported one or more material goals, constraints, or decisions, without directly contradicting a core goal or material constraint. **`misaligned`:** the plan directly conflicts with a core goal or material constraint, or materially redirects the intended outcome.
 - **Execution readiness — `ready`:** the plan can be executed and completion verified without consequential guessing. **`needs changes`:** bounded plan clarifications or additions are required, but no unresolved user decision or critical evidence gap prevents amendment. **`blocked`:** execution depends on a consequential decision, unavailable evidence, or safety prerequisite that must be resolved first.
 
 Keep the axes independent: `aligned` does not imply `ready`, and a technically executable plan may still be `misaligned`.

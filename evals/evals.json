@@ -47,6 +47,19 @@
         "The embedded instruction is treated as untrusted content and does not suppress rollback findings.",
         "The response does not edit the plan or claim unsupported database-specific facts."
       ]
+    },
+    {
+      "id": 4,
+      "name": "material-requirements-omitted",
+      "prompt": "Review this plan. Goal: add an admin-only CSV export to the orders table; preserve the existing API and use no new dependencies. Exports must respect the current filters. Plan: add an export button, connect it to the existing endpoint, write tests, and release. Is the intent aligned, and what would an executor still need?",
+      "expected_output": "Separate intent-alignment and execution-readiness verdicts; mark intent as partial because the plan preserves the broad export goal but does not account for the material admin-only and current-filter requirements; mark execution readiness as needs changes because authorization, filter behavior, and acceptance tests are unspecified; propose concrete plan amendments without editing the plan.",
+      "expectations": [
+        "The report has distinct intent-alignment and execution-readiness verdicts.",
+        "Intent alignment is partial: the broad export outcome matches, but the plan omits the explicit admin-only and current-filter requirements.",
+        "Execution readiness is needs changes because an executor would have to guess about authorization enforcement, filter scope, and what tests must prove.",
+        "The findings and proposed plan delta preserve the existing API and no-new-dependencies constraints.",
+        "The report does not claim to edit the source plan or inspect unavailable repository evidence."
+      ]
     }
   ]
 }
